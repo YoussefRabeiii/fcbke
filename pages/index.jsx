@@ -20,7 +20,7 @@ export default function Home({ session }) {
     return (
       <>
         <Head>
-          <title>Login - FCBK</title>
+          <title>Login - FCBKE</title>
         </Head>
         <Login />
       </>
@@ -29,7 +29,7 @@ export default function Home({ session }) {
   return (
     <div>
       <Head>
-        <title>FCBK</title>
+        <title>FCBKE</title>
       </Head>
 
       <Header />
