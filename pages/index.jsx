@@ -1,12 +1,35 @@
 import Head from "next/head";
 
-import { Header } from "@components";
+import { getSession } from "next-auth/client";
 
-export default function Home() {
+import { Header, Login } from "@components";
+
+export const getServerSideProps = async (context) => {
+  // Get User
+  const session = await getSession(context);
+
+  return {
+    props: {
+      session,
+    },
+  };
+};
+
+export default function Home({ session }) {
+  if (!session)
+    return (
+      <>
+        <Head>
+          <title>Login - FCBK</title>
+        </Head>
+        <Login />
+      </>
+    );
+
   return (
     <div>
       <Head>
-        <title>Facebook</title>
+        <title>FCBK</title>
       </Head>
 
       <Header />

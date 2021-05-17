@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { signOut, useSession } from "next-auth/client";
+
 import {
   BellIcon,
   ChatIcon,
@@ -19,6 +21,8 @@ import {
 import { HeaderIcon } from "@components/index";
 
 const Header = () => {
+  const [session] = useSession();
+
   return (
     <header className="sticky flex items-center p-2 lg:px-5 shadow-md top-0 z-50 bg-white">
       {/* Search Section */}
@@ -52,10 +56,18 @@ const Header = () => {
 
       {/* Profile Section */}
       <div className="flex items-center sm:space-x-2 justify-end">
-        {/* <Image src="" width={} height={} /> */}
+        <Image
+          width={40}
+          height={40}
+          layout="fixed"
+          onClick={signOut}
+          src={session.user.image}
+          className="rounded-full cursor-pointer"
+        />
 
-        {/* TODO: Use the real username */}
-        <p className="whitespace-nowrap font-semibold pr-3">Youssef Rabei</p>
+        <p className="whitespace-nowrap font-semibold pr-3">
+          {session.user.name}
+        </p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />

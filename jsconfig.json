@@ -2,9 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["utils/*"],
-      "@components": ["components/index.js"],
-      "@components/*": ["components/*"]
+      "@utils": ["utils/index.js"],
+      "@components": ["components/index.js"]
     }
   }
 }
