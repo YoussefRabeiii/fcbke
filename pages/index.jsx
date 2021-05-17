@@ -22,7 +22,6 @@ export default function Home({ session }) {
         <Head>
           <title>Login - FCBKE</title>
         </Head>
-        <Header />
         <Login />
       </>
     );
