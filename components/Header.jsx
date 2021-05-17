@@ -18,7 +18,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 
-import { HeaderIcon } from "@components/index";
+import { HeaderIcon } from "@components";
 
 const Header = () => {
   const [session] = useSession();

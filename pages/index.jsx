@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { getSession } from "next-auth/client";
 
-import { Header, Login } from "@components";
+import { Header, Login, Sidebar } from "@components";
 
 export const getServerSideProps = async (context) => {
   // Get User
@@ -35,7 +35,7 @@ export default function Home({ session }) {
       <Header />
 
       <main>
-        {/* <Sidebar /> */}
+        <Sidebar />
         {/* <Feed /> */}
         {/* <Widgets /> */}
       </main>
