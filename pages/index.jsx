@@ -5,7 +5,7 @@ import { getSession } from "next-auth/client";
 import { Header, Login, Sidebar } from "@components";
 
 export const getServerSideProps = async (context) => {
-  // Get User
+  // Get The User Session
   const session = await getSession(context);
 
   return {
@@ -22,23 +22,24 @@ export default function Home({ session }) {
         <Head>
           <title>Login - FCBKE</title>
         </Head>
+        <Header />
         <Login />
       </>
     );
 
   return (
-    <div>
+    <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
         <title>FCBKE</title>
       </Head>
 
       <Header />
 
-      <main>
+      <div className="flex">
         <Sidebar />
         {/* <Feed /> */}
         {/* <Widgets /> */}
-      </main>
+      </div>
     </div>
   );
 }
