@@ -8,6 +8,7 @@ export { default as Stories } from "./Stories";
 export { default as HeaderIcon } from "./HeaderIcon";
 export { default as SidebarRow } from "./SidebarRow";
 export { default as StoryCard } from "./StoryCard";
+export { default as InputBox } from "./InputBox";
 
 // Page-Like-Components
 export { default as Login } from "./Login";
