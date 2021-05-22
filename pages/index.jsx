@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { getSession } from "next-auth/client";
 
-import { Header, Login, Sidebar, Feed } from "@components";
+import { Header, Login, Sidebar, Feed, Widgets } from "@components";
 
 export const getServerSideProps = async (context) => {
   // Get The User Session
@@ -37,7 +37,7 @@ export default function Home({ session }) {
       <main className="flex">
         <Sidebar />
         <Feed />
-        {/* <Widgets /> */}
+        <Widgets />
       </main>
     </div>
   );

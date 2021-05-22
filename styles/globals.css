@@ -10,4 +10,8 @@
   .inputIcon {
     @apply flex items-center space-x-2  flex-grow justify-center p-2 rounded-xl cursor-pointer hover:bg-gray-100;
   }
+
+  .widgetIcon {
+    @apply h-6 cursor-pointer hover:text-blue-500;
+  }
 }

@@ -4,15 +4,14 @@ import { db } from "../firebase";
 import { Post } from "@components";
 
 const Posts = () => {
-  const [posts, loading, error] = useCollection(
+  const [posts] = useCollection(
     db.collection("posts").orderBy("timestamp", "desc")
   );
 
   return (
     <div>
       {posts?.docs.map((post) => {
-        const { name, message, timestamp, image, postImage } =
-          post.data();
+        const { name, message, timestamp, image, postImage } = post.data();
 
         return (
           <Post
