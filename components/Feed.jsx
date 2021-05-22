@@ -1,4 +1,4 @@
-import { Stories, InputBox } from "@components";
+import { Stories, InputBox, Posts } from "@components";
 
 const Feed = () => {
   return (
@@ -6,7 +6,7 @@ const Feed = () => {
       <div className="mx-auto max-w-md md:max-w-lg lg:max-w-2xl">
         <Stories />
         <InputBox />
-        {/* <Posts /> */}
+        <Posts />
       </div>
     </div>
   );
